@@ -29,6 +29,7 @@
   "devDependencies": {
     "@mendix/pluggable-widgets-tools": "^10.0.1",
     "@types/big.js": "^6.0.2",
+    "eslint-plugin-jest": "^27.4.2",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3"
   },

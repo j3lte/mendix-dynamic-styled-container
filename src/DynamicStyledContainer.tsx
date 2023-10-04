@@ -22,7 +22,14 @@ export const DynamicStyledContainer: FC<DynamicStyledContainerContainerProps> = 
     return (
         <ClassNames>
             {({ css, cx }) => (
-                <div className={cx(className, css`${styledState}`)}>
+                <div
+                    className={cx(
+                        className,
+                        css`
+                            ${styledState}
+                        `
+                    )}
+                >
                     {childNode}
                 </div>
             )}
