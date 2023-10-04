@@ -1,10 +1,4 @@
-import {
-    ContainerProps,
-    DropZoneProps,
-    // RowLayoutProps,
-    StructurePreviewProps,
-    TextProps
-} from "@j3lte/pluggable-widget-utils";
+import { ContainerProps, DropZoneProps, StructurePreviewProps, TextProps } from "@j3lte/pluggable-widget-utils";
 import { Problem, Properties } from "@mendix/pluggable-widgets-tools";
 
 import { DynamicStyledContainerPreviewProps } from "../typings/DynamicStyledContainerProps";

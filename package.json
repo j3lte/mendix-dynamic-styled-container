@@ -33,7 +33,10 @@
     "prettier": "^3.0.3"
   },
   "dependencies": {
-    "@j3lte/pluggable-widget-utils": "^0.2.0"
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.1",
+    "@j3lte/pluggable-widget-utils": "^0.2.0",
+    "clsx": "^2.0.0"
   },
   "resolutions": {
     "react": "18.2.0",
