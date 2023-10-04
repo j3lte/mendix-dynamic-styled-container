@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="caffcode.dynamicstyledcontainer.DynamicStyledContainer" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+<widget id="caffcode.dynamicstyledcontainer.DynamicStyledContainer" pluginWidget="true" needsEntityContext="false" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Dynamic Styled Container (1.0.0)</name>
     <description>Apply dynamic styles to your container</description>
-    <icon/>
+    <studioProCategory>Display</studioProCategory>
+    <studioCategory>Display</studioCategory>
+    <helpUrl>https://github.com/j3lte/mendix-dynamic-styled-container/blob/main/README.md</helpUrl>
     <properties>
         <propertyGroup caption="General">
             <property key="dataDynamicStyle" type="textTemplate" required="false" multiline="true">
