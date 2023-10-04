@@ -12,7 +12,7 @@ export default args => {
                 return terser({
                     format: {
                         comments: false,
-                        preamble: `/* -> Dynamic Styled Container v${pkg.version} | Build date: ${(new Date()).toISOString()} | Developer: ${pkg.author} | Copyright (c) CaffCode 2022. All Rights Reserved | https://caffcode.com <- */`
+                        preamble: `/* -> Dynamic Styled Container v${pkg.version} | Build date: ${(new Date()).toISOString()} | Developer: ${pkg.author} | Copyright (c) CaffCode 2022-2023. All Rights Reserved | https://caffcode.com <- */`
                     }
                 })
             }
