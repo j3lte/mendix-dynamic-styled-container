@@ -1,3 +1,5 @@
+<!-- START BADGES -->
+<!-- END BADGES -->
 # Dynamic Styled Container
 
 ![marketplace](/assets/MarketPlaceIcon.png)
