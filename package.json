@@ -22,20 +22,24 @@
     "lint": "pluggable-widgets-tools lint",
     "lint:fix": "pluggable-widgets-tools lint:fix",
     "prerelease": "npm run lint",
-    "release": "pluggable-widgets-tools release:web"
+    "release": "pluggable-widgets-tools release:web",
+    "cp": "mx-widget-tooling copy-release",
+    "jw": "npm run lint:fix && npm run release && npm run cp && mx-widget-tooling sizes"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^9.0.0",
+    "@mendix/pluggable-widgets-tools": "^10.0.1",
     "@types/big.js": "^6.0.2",
     "@types/react": "~17.0.1",
     "@types/react-dom": "~17.0.1",
     "@types/styled-components": "^5.1.26"
   },
-  "dependencies": {
-    "react-use": "^17.4.0"
+  "dependencies": {},
+  "resolutions": {
+    "react": "18.2.0",
+    "react-native": "0.70.7"
   },
-  "peerDependencies": {
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+  "overrides": {
+    "react": "18.2.0",
+    "react-native": "0.70.7"
   }
 }
