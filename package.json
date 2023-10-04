@@ -3,7 +3,7 @@
   "widgetName": "DynamicStyledContainer",
   "version": "1.0.0",
   "description": "Apply dynamic styles to your page",
-  "copyright": "© CaffCode 2022. All Rights Reserved.",
+  "copyright": "© CaffCode 2023. All Rights Reserved.",
   "author": "Jelte Lagendijk (jelte@caffcode.com)",
   "engines": {
     "node": ">=16"
@@ -29,11 +29,12 @@
   "devDependencies": {
     "@mendix/pluggable-widgets-tools": "^10.0.1",
     "@types/big.js": "^6.0.2",
-    "@types/react": "~17.0.1",
-    "@types/react-dom": "~17.0.1",
-    "@types/styled-components": "^5.1.26"
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@j3lte/pluggable-widget-utils": "^0.2.0"
+  },
   "resolutions": {
     "react": "18.2.0",
     "react-native": "0.70.7"

@@ -1,23 +1,24 @@
 import { createElement, FC, useEffect, useMemo, useState } from "react";
 
-import { ValueStatus } from "mendix";
 import { DynamicStyledContainerContainerProps } from "../typings/DynamicStyledContainerProps";
 import { convertStylesStringToObject } from "./util/style";
+import { useDynamicValueString } from "@j3lte/pluggable-widget-utils";
 
 export const DynamicStyledContainer: FC<DynamicStyledContainerContainerProps> = ({
     class: className,
     childNode,
-    dynamicStyle
+    dataDynamicStyle
 }) => {
     const [styledState, setStyledState] = useState("");
     const style = useMemo(() => convertStylesStringToObject(styledState), [styledState]);
-    const dynamicStyleProp = dynamicStyle && dynamicStyle.status === ValueStatus.Available ? dynamicStyle.value : null;
+
+    const dynamicStyleNewProp = useDynamicValueString(dataDynamicStyle);
 
     useEffect(() => {
-        if (dynamicStyleProp !== null && dynamicStyleProp !== styledState) {
-            setStyledState(dynamicStyleProp);
+        if (dynamicStyleNewProp !== null && dynamicStyleNewProp !== styledState) {
+            setStyledState(dynamicStyleNewProp);
         }
-    }, [dynamicStyleProp, styledState]);
+    }, [styledState, dynamicStyleNewProp]);
 
     return (
         <div className={className} style={style}>

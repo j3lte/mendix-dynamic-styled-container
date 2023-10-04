@@ -8,10 +8,9 @@
     <icon/>
     <properties>
         <propertyGroup caption="General">
-            <property key="dynamicStyle" type="expression" required="false" defaultValue="">
-                <caption>Dynamic style</caption>
-                <description>Define your dynamic style here with a string expression</description>
-                <returnType type="String" />
+            <property key="dataDynamicStyle" type="textTemplate" required="false" multiline="true">
+                <caption>Dynamic Style</caption>
+                <description>Define your dynamic style here as a string. This should be valid CSS</description>
             </property>
             <property key="childNode" type="widgets" required="false">
                 <caption>Container area</caption>

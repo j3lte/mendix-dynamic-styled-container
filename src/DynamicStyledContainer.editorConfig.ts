@@ -1,43 +1,18 @@
+import {
+    ContainerProps,
+    DropZoneProps,
+    // RowLayoutProps,
+    StructurePreviewProps,
+    TextProps
+} from "@j3lte/pluggable-widget-utils";
+import { Problem, Properties } from "@mendix/pluggable-widgets-tools";
+
 import { DynamicStyledContainerPreviewProps } from "../typings/DynamicStyledContainerProps";
 
-type Properties = PropertyGroup[];
-
-type PropertyGroup = {
-    caption: string;
-    propertyGroups?: PropertyGroup[];
-    properties?: Property[];
-};
-
-type Property = {
-    key: string;
-    caption: string;
-    description?: string;
-    objectHeaders?: string[]; // used for customizing object grids
-    objects?: ObjectProperties[];
-    properties?: Properties[];
-};
-
-type Problem = {
-    property?: string; // key of the property, at which the problem exists
-    severity?: "error" | "warning" | "deprecation"; // default = "error"
-    message: string; // description of the problem
-    studioMessage?: string; // studio-specific message, defaults to message
-    url?: string; // link with more information about the problem
-    studioUrl?: string; // studio-specific link
-};
-
-type ObjectProperties = {
-    properties: PropertyGroup[];
-    captions?: string[]; // used for customizing object grids
-};
+export type Platform = "web" | "desktop";
 
 export function getProperties(_values: DynamicStyledContainerPreviewProps, defaultProperties: Properties): Properties {
-    // Do the values manipulation here to control the visibility of properties in Studio and Studio Pro conditionally.
-    /* Example
-    if (values.myProperty === "custom") {
-        delete defaultProperties.properties.myOtherProperty;
-    }
-    */
+    // hidePropertyIn(defaultProperties, values, "dynamicStyle");
     return defaultProperties;
 }
 
@@ -54,4 +29,38 @@ export function check(_values: DynamicStyledContainerPreviewProps): Problem[] {
     }
     */
     return errors;
+}
+
+// export function getPreview(values: GoogleMapsPreviewProps, isDarkMode: boolean, version: number[]): PreviewProps {
+export function getPreview(
+    values: DynamicStyledContainerPreviewProps,
+    isDarkMode: boolean,
+    _version: number[]
+): StructurePreviewProps {
+    const title: TextProps = {
+        type: "Text",
+        content: "Dynamic Styled Container",
+        fontColor: isDarkMode ? "#FFF" : "#000",
+        fontSize: 8
+    };
+
+    const dropZone: DropZoneProps = {
+        type: "DropZone",
+        property: values.childNode,
+        placeholder: "Place your content here",
+        grow: 1
+    };
+
+    const container: ContainerProps = {
+        type: "Container",
+        grow: 1,
+        borders: true,
+        children: [title, dropZone]
+    };
+
+    return container;
+}
+
+export function getCustomCaption(_values: DynamicStyledContainerPreviewProps, _platform: Platform): string {
+    return "GoogleMaps";
 }
