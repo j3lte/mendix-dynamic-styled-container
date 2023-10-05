@@ -1,7 +1,7 @@
 {
   "name": "dynamicstyledcontainer",
   "widgetName": "DynamicStyledContainer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Apply dynamic styles to your page",
   "copyright": "© CaffCode 2023. All Rights Reserved.",
   "author": "Jelte Lagendijk (jelte@caffcode.com)",

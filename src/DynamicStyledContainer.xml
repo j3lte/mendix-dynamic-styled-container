@@ -2,7 +2,7 @@
 <widget id="caffcode.dynamicstyledcontainer.DynamicStyledContainer" pluginWidget="true" needsEntityContext="false" offlineCapable="true" supportedPlatform="Web"
     xmlns="http://www.mendix.com/widget/1.0/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Dynamic Styled Container (1.0.0)</name>
+    <name>Dynamic Styled Container (2.0.0)</name>
     <description>Apply dynamic styles to your container</description>
     <studioProCategory>Display</studioProCategory>
     <studioCategory>Display</studioCategory>
